@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
   def new
     puts "j'affiche depuis /new"
+    @user = User.new
   end
 
   def create
     puts "j'affiche depuis /create"
     puts params.inspect
     puts params[:authenticity_token]
-    @user = User.create(username: params[:username],email: params[:email] ,bio: params[:bio])
+    @user = User.create(username: params[:user][:username], email: params[:user][:email], bio: params[:user][:bio] )
     if @user.save
       redirect_to "/profile/#{@user.username}"
     else
