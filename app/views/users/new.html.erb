@@ -1,3 +1,4 @@
+<center>
 <h1>Sign Up</h1>
 <p>please fill in the following form</p>
 <!-- Méthode de formulaire HTML
@@ -11,29 +12,24 @@
   <textarea name="bio" rows="4" cols="90"></textarea></br>
   <input type="submit" value="submit">
 </form>
---> 
+-->
 
-<!--
+<!-- Méthode de formulaire form_tag
 <%= form_tag url_for(action: 'create'), method: "post" do %>
-
      <%= label_tag 'Username' %><br />
      <%= text_field_tag 'username'%>
      <br /> <br />
-
      <%= label_tag 'Email' %><br />
      <%= text_field_tag 'email'%>
      <br /> <br />
-
      <%= label_tag 'Bio' %><br />
      <%= text_area_tag 'bio'%>
      <br /> <br />
-
      <%= submit_tag "Sign in" %>
-
 <% end %>
 -->
 
-<!-- Méthode de formulaire form_tag -->
+<!-- Méthode formulaire form_for-->
 <%= form_for @user, url: {action: 'create'} do |f| %>
 <p>Username:</p>
   <%= f.text_field :username %>
@@ -44,3 +40,4 @@
 </br>
   <%= f.submit "Create" %>
 <% end %>
+</center>
