@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/new', to: 'users#new', as: 'new_user'
   post '/create', to: 'users#create', as: 'create_user'
   get '/profile/:id', to: 'users#profile', as: 'profile_user'
+  get '/about', to: 'static_pages#about', as: 'about'
 end
