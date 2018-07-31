@@ -3,5 +3,4 @@ Rails.application.routes.draw do
   get '/new', to: 'users#new', as: 'new_user'
   post '/create', to: 'users#create', as: 'create_user'
   get '/profile/:id', to: 'users#profile', as: 'profile_user'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

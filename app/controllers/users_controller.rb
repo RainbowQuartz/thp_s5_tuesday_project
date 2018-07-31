@@ -7,7 +7,11 @@ class UsersController < ApplicationController
     puts "j'affiche depuis /create"
     puts params.inspect
     @user = User.create(username: params[:username],email: params[:email] ,bio: params[:bio])
-    redirect_to "/profile/#{@user.username}"
+    if @user.save
+      redirect_to "/profile/#{@user.username}"
+    else
+      render '/users/error'
+    end
   end
 
   def profile
