@@ -12,6 +12,7 @@
 ## Database stucture:
 Table user :
 * username:string
+* email:string
 * bio:text
  
 
