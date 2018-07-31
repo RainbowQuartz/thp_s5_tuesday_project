@@ -12,14 +12,10 @@ class UsersController < ApplicationController
 
   def profile
     puts Time.now
-    puts "j'affiche depuis profile"
-    @username = params[:username]
-    puts "nom user: #{params[:username]}"
-    @id = User.find_by(username: @username).id
-    puts "numero de l'id #{@id}"
-    @email = User.find_by(username: @username).email
-    puts "email : #{@email}"
-    @bio = User.find_by(username: @username).bio
-    puts "bio : #{@bio}"
+    puts "displaying from profile"
+    @user = User.find_by(username: params[:id])
+    puts @user.username
+    puts @user.email
+    puts @user.bio
   end
 end
