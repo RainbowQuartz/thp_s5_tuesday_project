@@ -1,24 +1,20 @@
-# README
+# App ruby on rails sur Heroku Mardi semaine 5 - THP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*Ruby version: 2.5.1*
 
-Things you may want to cover:
+### Groupe de Rennes avec:
+* Léona Chevrel
+* Rémi Samson
+* Christophe Leray
 
-* Ruby version
+## Lien vers l'application Heroku : [Heroku app]
 
-* System dependencies
+## Database stucture:
+Table user :
+* username:string
+* bio:text
+ 
 
-* Configuration
 
-* Database creation
+        
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
